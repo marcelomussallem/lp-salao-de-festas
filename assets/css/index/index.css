@@ -1,0 +1,10 @@
+@import "../global/global.css";
+
+@import "./partials/footer.css";
+@import "./partials/header.css";
+@import "./partials/section-about.css";
+@import "./partials/section-benefits.css";
+@import "./partials/section-gallery.css";
+@import "./partials/section-hero.css";
+@import "./partials/section-reviews.css";
+@import "./partials/section-services.css";

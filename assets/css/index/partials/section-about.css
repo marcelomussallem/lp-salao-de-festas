@@ -1,0 +1,141 @@
+.about-section {
+    padding: clamp(1.875rem, 3vw, 2.5rem) 0;
+    background-color: var(--bg-dark-soft);
+    font-family: "Poppins", sans-serif;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+    padding: 0 5%;
+    gap: clamp(1.875rem, 4vw, 3.125rem);
+}
+
+.about-content-side {
+    flex: 1;
+}
+
+.about-tag {
+    display: block;
+    color: var(--brand-700);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-weight: 600;
+    margin-bottom: clamp(0.5rem, 1vw, 0.625rem);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.about-content-side h2 {
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    font-weight: 700;
+    color: var(--text-inverse);
+    margin-bottom: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2;
+}
+
+.about-content-side p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: clamp(0.75rem, 1.5vw, 0.938rem);
+    line-height: 1.6;
+}
+
+/* cores hardcoded intencionais — gradiente oficial do Instagram */
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: clamp(0.625rem, 1.2vw, 0.75rem) clamp(1.25rem, 2vw, 1.5rem);
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45);
+    border-radius: 3.125rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-top: clamp(1rem, 2vw, 1.25rem);
+    box-shadow: 0 0.25rem 0.938rem rgba(131, 58, 180, 0.3);
+}
+
+.instagram-link:hover {
+    transform: translateY(-0.188rem);
+    box-shadow: 0 0.375rem 1.25rem rgba(131, 58, 180, 0.5);
+}
+
+.instagram-link:active {
+    transform: translateY(0);
+}
+
+.instagram-link i {
+    font-size: clamp(1.5rem, 2vw, 1.75rem);
+    color: var(--text-inverse);
+}
+
+.instagram-text {
+    color: var(--text-inverse);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-weight: 600;
+}
+
+.about-image-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    max-width: clamp(25.5rem, 30vw, 37.5rem);
+    border-radius: 0.625rem;
+    /* mask faz a imagem desaparecer suavemente na base */
+    mask-image: linear-gradient(to bottom, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black, black 92%, transparent);
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+/* mobile e tablet até 1024px */
+@media (max-width: 62.5rem) {
+    .about-container {
+        flex-direction: column;
+        gap: 1.875rem;
+        text-align: center;
+    }
+
+    /* imagem vai pra baixo do texto no mobile */
+    .about-image-side {
+        order: 2;
+        min-height: auto;
+    }
+
+    .about-content-side {
+        order: 1;
+    }
+
+    .about-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .about-tag {
+        font-size: 18px;
+    }
+
+    .about-content-side h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .about-content-side p {
+        font-size: 16px;
+    }
+
+    .instagram-link {
+        margin: 1.25rem auto 0;
+    }
+}

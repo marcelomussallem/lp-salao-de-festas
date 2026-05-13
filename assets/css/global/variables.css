@@ -1,0 +1,42 @@
+:root {
+    /* marca */
+    --brand-300: #FBE7CD;
+    --brand-500: #c9a84c;
+    --brand-600: #f2de88;
+    --brand-700: #a8873a;
+    --brand-800: #ba8d30;
+
+    /* texto */
+    --text-primary: #000000;
+    --text-secondary: #aaaaaa;
+    --text-tertiary: #eeeeee;
+    --text-inverse: #ffffff;
+
+    /* background */
+    --bg-primary: #ffffff;
+    --bg-secondary: #F5F5F5;
+    --bg-dark: #000000;
+    --bg-dark-soft: #0E0E0E;
+
+    /* cta */
+    --cta-bg: #34AF23;
+    --cta-bg-hover: #1e8f0f;
+    --cta-text: var(--text-inverse);
+
+    /* botões */
+    --btn-bg: var(--brand-500);
+    --btn-bg-hover: var(--brand-700);
+    --btn-text: var(--text-inverse);
+
+    /* sombras */
+    --shadow-image: rgba(249, 220, 180, 0.8);
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+    /* depoimentos */
+    --estrela-dourada: #fbbf24;
+    --google-azul: #4285f4;
+    --chatgpt-verde: #10a37f;
+    --gemini-roxo: #8e75ff;
+    --borda-clara: #e2e8f0;
+}

@@ -1,0 +1,189 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 clamp(5%, 8vw, 14%);
+    height: 6.25rem; /* 100px */
+    background-color: var(--bg-dark);
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: clamp(1.25rem, 4vw, 3.75rem);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    font-size: clamp(1rem, 1.8vw, 1.188rem);
+    transition: color 0.3s;
+    display: inline-block;
+    position: relative;
+    padding: 0 0 5px 0;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--brand-600);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover {
+    color: var(--brand-600) !important;
+    text-shadow: 0.6px 0 0 currentColor;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.btn-whatsapp-fa {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--btn-bg);
+    color: var(--text-primary);
+    padding: clamp(0.5rem, 1vw, 0.625rem) clamp(0.938rem, 2vw, 1.25rem);
+    border-radius: 50px;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-whatsapp-fa:hover {
+    transform: scale(1.05);
+    background-color: var(--btn-bg-hover);
+    box-shadow: 0 6px 12px rgba(201, 168, 76, 0.4);
+}
+
+.btn-whatsapp-fa:active {
+    transform: scale(0.95);
+}
+
+.btn-whatsapp-icon-fa {
+    font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+    margin-right: clamp(0.625rem, 1.5vw, 0.938rem);
+}
+
+.btn-whatsapp-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-whatsapp-text {
+    display: block;
+    font-size: clamp(0.75rem, 1.3vw, 0.875rem);
+    font-weight: normal;
+}
+
+.btn-whatsapp-phone {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* hambúrguer oculto no desktop, aparece só no mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--bg-dark);
+}
+
+/* mobile e tablet até 1024px */
+@media (max-width: 62.5rem) {
+    header {
+        position: relative; /* necessário para o hambúrguer com position absolute funcionar */
+        justify-content: center;
+        padding: 0 5%;
+        height: 5rem;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto;
+        width: clamp(5rem, 100%, 12rem);
+        height: auto;
+    }
+
+    .menu-logo i {
+        font-size: 2rem;
+    }
+
+    .menu-logo span {
+        font-size: 1.75rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--brand-500);
+    }
+
+    /* botão whatsapp removido no mobile pra não apertar o header */
+    header .btn-whatsapp-fa {
+        display: none;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--brand-500);
+        z-index: 1000;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu.active ul li a:hover,
+    .nav-menu.active ul li a:active {
+        color: var(--brand-300) !important;
+        background-color: var(--brand-700);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        color: var(--text-primary);
+        font-size: 1.25rem;
+        width: 100%;
+        text-align: center;
+        display: block;
+        padding: 0.625 0;
+    }
+}

@@ -1,0 +1,195 @@
+.services-section {
+    padding: clamp(1.875rem, 3vw, 2.5rem) 0;
+    background-color: #0a0a0a;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.services-title {
+    text-align: center;
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+    color: #ffffff;
+    margin-bottom: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+.services-subtitle {
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    color: #cccccc;
+    max-width: 900px;
+    margin: 0 auto clamp(2rem, 4vw, 3.125rem);
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--brand-700), var(--brand-500));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel-services {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: clamp(0.625rem, 1.5vw, 1.25rem);
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: clamp(0.938rem, 2vw, 1.875rem);
+    transition: transform 0.5s ease;
+}
+
+.service-card {
+    min-width: clamp(15.625rem, 30vw, 17.5rem);
+    background: #111111;
+    border-radius: 1.25rem 1.25rem 2.5rem 2.5rem;
+    padding: 0 0 25px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+}
+
+.service-card:hover {
+    border-color: var(--brand-500);
+    transform: translateY(-6px);
+}
+
+.card-image {
+    width: 100%;
+    height: 13.75rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1.25rem 1.25rem 50% 50% / 1.25rem 1.25rem 1.875rem 1.875rem;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-icon {
+    display: none;
+}
+
+.service-card h3 {
+    font-size: clamp(1.125rem, 1.8vw, 1.25rem);
+    font-weight: 600;
+    color: var(--brand-500);
+    margin: 1.25rem 0 0.9375rem;
+    text-align: center;
+    padding: 0 clamp(0.938rem, 2vw, 1.25rem);
+}
+
+.service-card h3 span {
+    color: var(--brand-500);
+}
+
+.service-card p {
+    font-size: clamp(0.813rem, 1.3vw, 0.875rem);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0 clamp(0.938rem, 2vw, 1.25rem);
+}
+
+.card-btn {
+    display: none;
+}
+
+.carousel-arrow-left,
+.carousel-arrow-right {
+    width: clamp(2.5rem, 4vw, 3.125rem);
+    height: clamp(2.5rem, 4vw, 3.125rem);
+    border-radius: 50px;
+    border: 1px solid #c9a84c;
+    background-color: transparent;
+    color: #c9a84c;
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-arrow-left:hover,
+.carousel-arrow-right:hover {
+    background-color: #c9a84c;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.carousel-arrow-left:active,
+.carousel-arrow-right:active {
+    transform: scale(0.95);
+}
+
+/* mobile e tablet até 1024px */
+@media (max-width: 62.5rem) {
+    .services-section {
+        padding: clamp(1.5rem, 2.5vw, 1.875rem) 0;
+        background-color: #0a0a0a;
+    }
+
+    .services-title {
+        font-size: clamp(1.5rem, 2.2vw, 1.75rem);
+        margin-bottom: 8px;
+    }
+
+    .services-subtitle {
+        font-size: clamp(0.938rem, 1.4vw, 1rem);
+        margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .carousel-services {
+        gap: 0.625rem;
+    }
+
+    .service-card {
+        min-width: clamp(14rem, 65vw, 18.75rem);
+        padding: 0;
+        flex-shrink: 1;
+    }
+
+    .card-image {
+        height: 11.25rem;
+        border-radius: 1.25rem 1.25rem 50% 50% / 1.25rem 1.25rem 1.875rem 1.875rem;
+    }
+
+    .service-card h3 {
+        padding: 0 15px;
+        font-size: 0.813rem;
+        margin-bottom: 0.938rem;
+    }
+
+    .service-card p {
+        padding: 0 15px;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .carousel-arrow-left,
+    .carousel-arrow-right {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
