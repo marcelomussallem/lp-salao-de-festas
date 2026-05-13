@@ -77,7 +77,7 @@ landing-page/
 Sem instalação é só clicar no link abaixo e ver o projeto rodando no navegador.
 
 ```bash
-https://marcelomussallem.github.io/lp-lp-salao-de-festas
+https://marcelomussallem.github.io/lp-salao-de-festas
 ```
 
 ---
